@@ -1,3 +1,4 @@
+
                                                      ABSTRACT
 With the emergence of HR Analytics in organizations; gathering, interpreting, and measuring of HR data has become easy. 
 It acts as a tool which is a combination of statistical techniques that enable collection, interpretation, measurement and forecasting of data.
@@ -6,33 +7,33 @@ HR Analytics provides various opportunities to business as forecast workforce re
 In this project I tried to visualize the retrenchment rate and promotion rate in a company.
 
                                                    Methodology Used 
-•	Start
-•	Integrating data source with power query
-•	Querying data onto the navigator
-•	Editing the queries on the table
-•	Shaping the data according to requirements
-•	Merging queries from different tables
-•	Creating visuals (charts, graphs, maps, etc) using different metrics in table
-•	Loading the Report onto the Power BI Desktop
+1. Start
+2. Integrating data source with power query
+3. Querying data onto the navigator
+4. Editing the queries on the table
+5. Shaping the data according to requirements
+6. Merging queries from different tables
+7. Creating visuals (charts, graphs, maps, etc) using different metrics in table
+8. Loading the Report onto the Power BI Desktop
 
                                         Creating Measures using DAX (Data Analysis expressions)
-1)% Due For Promotion = DIVIDE([Due For Promotion],[Total Emp],0)
-2) % female = DIVIDE([Female],[Total Emp],0)
-3) % high rated = DIVIDE([High rated],[Total Emp],0)
-4) % low rated = DIVIDE([Low rated],[Total Emp],0)
-5) % male = DIVIDE([Male],[Total Emp],0)
-6) % Not Due = DIVIDE([Not Due],[Total Emp],0)
-7) % On service = DIVIDE([On Service],[Total Emp],0)
-8) % will be retrenched = DIVIDE([Will be retrenched],[Total Emp],0)
-9) Due For Promotion = if(isblank(CALCULATE([Total Emp],’HR Analytics Data’[Promotion Status]=”Due for Promotion”)),0,CALCULATE([Total Emp],’HR Analytics Data’[Promotion Status]=”Due for Promotion”))
-10) Female = CALCULATE([Total Emp],’HR Analytics Data’[Gender]=”female”)
-11) High rated = CALCULATE([Total Emp],’HR Analytics Data’[Performance Rating]=”High Rating”)
-12) Low rated = CALCULATE([Total Emp],’HR Analytics Data’[Performance Rating]=”Low Rating”)
-13) Male = CALCULATE([Total Emp],’HR Analytics Data’[Gender]=”male”)
-14) Not Due = if(isblank(CALCULATE([Total Emp],’HR Analytics Data’[Promotion Status]=”Not Due”)),0,CALCULATE([Total Emp],’HR Analytics Data’[Promotion Status]=”Not Due”))
-15) On Service = if(ISBLANK(CALCULATE([Total Emp],’HR Analytics Data’[Retrenchment Status]=”On service”)),0,CALCULATE([Total Emp],’HR Analytics Data’[Retrenchment Status]=”On service”))
-16) Total Emp = COUNTROWS(‘HR Analytics Data’)
-17) Will be retrenched = if(ISBLANK(CALCULATE([Total Emp],’HR Analytics Data’[Retrenchment Status]=”Will be retrenched”)),0,CALCULATE([Total Emp],’HR Analytics Data’[Retrenchment Status]=”Will be retrenched”))
+1. % Due For Promotion = DIVIDE([Due For Promotion],[Total Emp],0)
+2. % female = DIVIDE([Female],[Total Emp],0)
+3. % high rated = DIVIDE([High rated],[Total Emp],0)
+4. % low rated = DIVIDE([Low rated],[Total Emp],0)
+5. % male = DIVIDE([Male],[Total Emp],0)
+6. % Not Due = DIVIDE([Not Due],[Total Emp],0)
+7. % On service = DIVIDE([On Service],[Total Emp],0)
+8. % will be retrenched = DIVIDE([Will be retrenched],[Total Emp],0)
+9. Due For Promotion = if(isblank(CALCULATE([Total Emp],’HR Analytics Data’[Promotion Status]=”Due for Promotion”)),0,CALCULATE([Total Emp],’HR Analytics Data’[Promotion Status]=”Due for Promotion”))
+10. Female = CALCULATE([Total Emp],’HR Analytics Data’[Gender]=”female”)
+11. High rated = CALCULATE([Total Emp],’HR Analytics Data’[Performance Rating]=”High Rating”)
+12. Low rated = CALCULATE([Total Emp],’HR Analytics Data’[Performance Rating]=”Low Rating”)
+13. Male = CALCULATE([Total Emp],’HR Analytics Data’[Gender]=”male”)
+14. Not Due = if(isblank(CALCULATE([Total Emp],’HR Analytics Data’[Promotion Status]=”Not Due”)),0,CALCULATE([Total Emp],’HR Analytics Data’[Promotion Status]=”Not Due”))
+15. On Service = if(ISBLANK(CALCULATE([Total Emp],’HR Analytics Data’[Retrenchment Status]=”On service”)),0,CALCULATE([Total Emp],’HR Analytics Data’[Retrenchment Status]=”On service”))
+16. Total Emp = COUNTROWS(‘HR Analytics Data’)
+17. Will be retrenched = if(ISBLANK(CALCULATE([Total Emp],’HR Analytics Data’[Retrenchment Status]=”Will be retrenched”)),0,CALCULATE([Total Emp],’HR Analytics Data’[Retrenchment Status]=”Will be retrenched”))
 
                                                        Summary
 We have successfully performed exploratory analysis on the HR analytics data set.
